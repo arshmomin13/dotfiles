@@ -95,3 +95,6 @@ alias cd="z"
 
 # ---- Eza (better ls) -----
 alias ls='eza -a --icons=always --group-directories-first'
+
+# add coloration to tree command
+alias tree='tree -C'
