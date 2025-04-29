@@ -7,3 +7,6 @@ font-size = 15
 font-family = "MesloLGS Nerd Font Mono"
 background-opacity = 0.85
 background = "black"
+macos-non-native-fullscreen = "visible-menu"
+macos-titlebar-style = "tabs"
+macos-window-shadow= "false"
