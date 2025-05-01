@@ -3,8 +3,8 @@
 # -------------------
 
 
-font-size = 15
-font-family = "MesloLGS Nerd Font Mono"
+font-size = 16
+font-family = "Iosveka Nerd Font Mono"
 background-opacity = 0.85
 background = "black"
 macos-non-native-fullscreen = "visible-menu"
