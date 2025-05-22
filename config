@@ -4,9 +4,9 @@
 
 
 font-size = 16
-font-family = "Iosveka Nerd Font Mono"
+font-family = "Iosevka Custom"
 background-opacity = 0.85
 background = "black"
 macos-non-native-fullscreen = "visible-menu"
 macos-titlebar-style = "tabs"
-macos-window-shadow= "false"
+# macos-window-shadow= "false"
