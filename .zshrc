@@ -99,3 +99,6 @@ alias ls='eza -a --icons=always --group-directories-first'
 # add coloration to tree command
 alias tree='tree -C'
 alias poweradapter='system_profiler SPPowerDataType | grep -i "Wattage"'
+
+# thefuck 
+eval $(thefuck --alias)

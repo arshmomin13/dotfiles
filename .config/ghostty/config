@@ -5,6 +5,7 @@
 
 font-size = 16
 font-family = "Iosevka Custom"
+font-family = "Symbols Nerd Font Mono"
 background-opacity = 0.85
 background = "black"
 macos-non-native-fullscreen = "visible-menu"
