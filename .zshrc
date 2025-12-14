@@ -69,9 +69,6 @@ PROMPT+='${white}$ ${reset}' # `$` (and reset color)
 # Set the continuation prompt (PS2)
 PROMPT2='${yellow}→ ${reset}'
 
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # history setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -85,20 +82,18 @@ setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
-# run all basic brew commands with an alias
-alias brewmaint='brew update && brew upgrade && brew autoremove && brew cleanup -s'
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# ---- Zoxide (better cd) ----
-eval "$(zoxide init zsh)"
+# ---- EVALS ----
+eval "$(zoxide init zsh)" # Zoxide (better cd)
+eval "$(thefuck --alias)" # thefuck
 
-alias cd="z"
+# ---- ALIASES ----
+alias brewmaint='brew update && brew upgrade && brew autoremove && brew cleanup -s' # run all basic brew commands with an alias
+alias cd='z' # replace cd w/ zoxide
+alias ls='eza -a --icons=always --group-directories-first' # Eza (better ls)
+alias tree='tree -C' # # add coloration to tree command
+alias poweradapter='system_profiler SPPowerDataType | grep -i "Wattage"' # see wattage of attached charger on macbook
+alias cat='bat' # better cat
 
-# ---- Eza (better ls) -----
-alias ls='eza -a --icons=always --group-directories-first'
-
-# add coloration to tree command
-alias tree='tree -C'
-alias poweradapter='system_profiler SPPowerDataType | grep -i "Wattage"'
-
-# thefuck 
-eval $(thefuck --alias)
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
