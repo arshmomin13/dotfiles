@@ -94,6 +94,6 @@ alias cd='z' # replace cd w/ zoxide
 alias ls='eza -a --icons=always --group-directories-first' # Eza (better ls)
 alias tree='tree -C' # # add coloration to tree command
 alias poweradapter='system_profiler SPPowerDataType | grep -i "Wattage"' # see wattage of attached charger on macbook
-alias cat='bat' # better cat
+# alias cat='bat' # better cat
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
