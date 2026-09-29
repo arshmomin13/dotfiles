@@ -10,4 +10,4 @@ background-opacity = 0.85
 background = "black"
 macos-non-native-fullscreen = "visible-menu"
 macos-titlebar-style = "tabs"
-# macos-window-shadow= "false"
+# macos-window-shadow = "false"

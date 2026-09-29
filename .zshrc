@@ -54,6 +54,8 @@ function prompt_venv() {
     fi
 }
 
+export GREP_COLOR='1;37;41'
+
 # Enable required zsh options
 setopt PROMPT_SUBST
 
@@ -102,10 +104,11 @@ function fuck() {
 }
 
 # ---- ALIASES ----
-alias brewmaint='brew update && brew upgrade && brew autoremove && brew cleanup -s' # run all basic brew commands with an alias
+alias brewmaint='brew update && brew upgrade -y && brew autoremove && brew cleanup -s' # run all basic brew commands with an alias
 alias cd='z' # replace cd w/ zoxide
 alias ls='eza -a --icons=always --group-directories-first' # Eza (better ls)
 alias tree='tree -C' # add coloration to tree command
+alias grep='grep --color=auto'
 alias poweradapter='system_profiler SPPowerDataType | grep -i "Wattage"' # see wattage of attached charger on macbook
 # alias cat='bat --paging=never' # better cat
 
