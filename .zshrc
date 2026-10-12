@@ -42,7 +42,6 @@ alias lla='ls -la'
 alias tree='tree -C' # add coloration to tree command
 alias grep='grep --color=auto'
 alias poweradapter='system_profiler SPPowerDataType | grep -i "Wattage"' # see wattage of attached charger on macbook
-# alias cat='bat --paging=never' # better cat
 alias clang++="clang++ -std=c++20"
 
 # ---- PLUGINS ----
