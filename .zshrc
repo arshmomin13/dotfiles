@@ -36,6 +36,9 @@ eval "$(starship init zsh)"
 alias brewmaint='brew update && brew upgrade -y && brew autoremove && brew cleanup -s' # run all basic brew commands with an alias
 alias cd='z' # replace cd w/ zoxide
 alias ls='eza -a --icons=always --group-directories-first' # Eza (better ls)
+alias la='ls -a'
+alias ll='ls -l'
+alias lla='ls -la'
 alias tree='tree -C' # add coloration to tree command
 alias grep='grep --color=auto'
 alias poweradapter='system_profiler SPPowerDataType | grep -i "Wattage"' # see wattage of attached charger on macbook
