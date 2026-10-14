@@ -22,8 +22,12 @@ if [[ ! -f "$_zoxide_cache" || "$commands[zoxide]" -nt "$_zoxide_cache" ]]; then
 fi
 source "$_zoxide_cache"
 
-# Starship
-eval "$(starship init zsh)"
+# Starship - cached to save a few milliseconds
+_starship_cache="${XDG_CACHE_HOME:-$HOME/.cache}/starship_init.zsh"
+if [[ ! -f "$_starship_cache" || "$commands[starship]" -nt "$_starship_cache" ]]; then
+    starship init zsh --print-full-init >| "$_starship_cache"
+fi
+source "$_starship_cache"
 
 # ---- ALIASES ----
 alias brewmaint='brew update && brew upgrade -y && brew autoremove && brew cleanup -s' # run all basic brew commands with an alias
