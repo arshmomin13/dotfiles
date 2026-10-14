@@ -22,13 +22,6 @@ if [[ ! -f "$_zoxide_cache" || "$commands[zoxide]" -nt "$_zoxide_cache" ]]; then
 fi
 source "$_zoxide_cache"
 
-# thefuck — lazy-loaded to avoid slow Python startup on every shell startup
-# Initialises on first use; re-run command after the first invocation.
-function fuck() {
-    eval "$(thefuck --alias)"
-    unfunction fuck
-}
-
 # Starship
 eval "$(starship init zsh)"
 
