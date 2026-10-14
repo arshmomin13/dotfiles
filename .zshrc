@@ -3,7 +3,7 @@ export GREP_COLOR='1;37;41'
 # history setup
 HISTFILE=$HOME/.zhistory
 SAVEHIST=10000
-HISTSIZE=10000
+HISTSIZE=12000
 setopt share_history
 setopt hist_expire_dups_first
 setopt hist_ignore_dups
@@ -15,7 +15,7 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
 # ---- TOOLS ----
-# Zoxide (better cd) — cached to avoid subprocess on every shell startup
+# Zoxide (better cd) - cached to avoid subprocess on every shell startup
 _zoxide_cache="${XDG_CACHE_HOME:-$HOME/.cache}/zoxide_init.zsh"
 if [[ ! -f "$_zoxide_cache" || "$commands[zoxide]" -nt "$_zoxide_cache" ]]; then
     zoxide init zsh >| "$_zoxide_cache"
