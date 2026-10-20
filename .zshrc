@@ -29,6 +29,11 @@ if [[ ! -f "$_starship_cache" || "$commands[starship]" -nt "$_starship_cache" ]]
 fi
 source "$_starship_cache"
 
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d "$PYENV_ROOT/bin" ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
 # ---- ALIASES ----
 alias brewmaint='brew update && brew upgrade -y && brew autoremove && brew cleanup -s' # run all basic brew commands with an alias
 alias cd='z' # replace cd w/ zoxide
@@ -37,7 +42,7 @@ alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -la'
 alias tree='tree -C' # add coloration to tree command
-alias grep='grep --color=auto'
+alias grep='rg'
 alias poweradapter='system_profiler SPPowerDataType | grep -i "Wattage"' # see wattage of attached charger on macbook
 alias clang++="clang++ -std=c++20"
 alias bat='bat --style plain --pager never'

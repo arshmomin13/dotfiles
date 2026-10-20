@@ -3,9 +3,10 @@
 	"font_size": 14,
 	"tab_size": 5,
 	"popup_shadows": false,
+	// "highlight_line": true,
 	"sidebar_on_right": true,
 	"relative_line_numbers": false,
-	"save_on_focus_lost": true,
+	// "save_on_focus_lost": true,
 	"trim_trailing_white_space_on_save": true,
 	"neovintageous_build_version": 13200,
 	"ignored_packages":
