@@ -1,4 +1,5 @@
 export GREP_COLOR='1;37;41'
+export PATH="$HOME/.local/bin:$PATH"
 
 # history setup
 HISTFILE=$HOME/.zhistory
@@ -28,11 +29,6 @@ if [[ ! -f "$_starship_cache" || "$commands[starship]" -nt "$_starship_cache" ]]
     starship init zsh --print-full-init >| "$_starship_cache"
 fi
 source "$_starship_cache"
-
-# Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d "$PYENV_ROOT/bin" ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
 
 # ---- ALIASES ----
 alias brewmaint='brew update && brew upgrade -y && brew autoremove && brew cleanup -s' # run all basic brew commands with an alias
