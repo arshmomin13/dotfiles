@@ -1,3 +1,4 @@
+typeset -U path
 export GREP_COLOR='1;37;41'
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -38,8 +39,8 @@ alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -la'
 alias tree='tree -C' # add coloration to tree command
-alias grep='rg'
-alias poweradapter='system_profiler SPPowerDataType | grep -i "Wattage"' # see wattage of attached charger on macbook
+alias grep='grep --color=auto'
+alias poweradapter='system_profiler SPPowerDataType | rg -i "Wattage"' # see wattage of attached charger on macbook
 alias clang++="clang++ -std=c++20"
 alias bat='bat --style plain --pager never'
 
